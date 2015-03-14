@@ -1,5 +1,6 @@
 #!/usr/bin/env python2
 import requests
+import random
 import re
 
 WORDS = ['bitcoin']
@@ -14,7 +15,10 @@ def handle(text, mic, profile):
 
 	price = response["price"]
 	price = round(price / 100.00, 2)
-	message = "One bitcoin is currently worth %s U.S. Dollars" % price
+	
+	messages = ["One bitcoin is currently worth %s U.S. Dollars" % price,
+			"The price of one bitcoin is %s U.S. Dollars" % price]
+	message = random.choice(messages)
 
 	mic.say(message)
 
