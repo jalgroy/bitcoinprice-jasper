@@ -1,4 +1,4 @@
-# bitcoinprice_jasper
+# bitcoinprice-jasper
 
 Get the bitcoin price with [jasper](https://github.com/jasperproject). 
 
